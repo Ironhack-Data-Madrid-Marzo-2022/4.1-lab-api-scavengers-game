@@ -2,4 +2,4 @@
 **/*.ipynb_checkpoints/
 **/__pycache__
 .vscode
-/your_code/tkn.txt
+./your_code/tkn.txt
