@@ -8,22 +8,25 @@ In the lesson, you have learned how to make Python requests to APIs and parse th
 
 ## Getting Started
 
+### CREATE NEW TOKEN
 In order to get started, we'd like you to create a new access token in your [Github account](https://github.com/settings/tokens). 
 1. Go to settings in you profile.
 1. On the left sidebar, click **Developer settings**.
 1. Click `Personal access tokens`>>`Generate new token` in the page.
 1. Enter token description.
 1. Select the scopes for which you allow the token to access. Check at least all the `repo` checkboxes as shown in the screenshot below.
-1. Select the expiration date for your token. To avoid problems if we accidentally upload our token you can set it for tomorrow. *Hint: remember to write a comment in your notebook to remember that this token is not working forever.*
+1. Select the expiration date for your token. To avoid problems if we accidentally upload our token you can click on `custom` and set it for tomorrow. *Hint: remember to write a comment in your notebook to remember that this token is not working forever.*
 1. Click `Generate token`. Github will create a personal access token for you. 
+1. At this point Github will show you a new token. :exclamation: Make sure you save the token on your computer because this is the only time you will see the token string. If for any reason you lost your token, simply come back to Github and re-authorize yourself a new token.
 
 ![Github create personal token](imgs/github-create-token.png)
 
 A personal access token is a secret password to allow you or your app to make remote requests to the Github API.
 
-:exclamation: Make sure you save the token on your computer because this is the only time you will see the token string. If for any reason you lost your token, simply come back to Github and re-authorize yourself a new token.
 
 :warning: **Do not share your Github personal access token with anyone else! Hackers can use your token to do bad things that make damage and result in suspension of your account.**
+
+### CHECK NEW TOKEN
 
 After generating the token, you can test it with `curl` in the Terminal. Assuming your Git username is `johndoe` and token is `d10ev1shpm10x5qox9ckw1k9b792p9rq0ogplpn5cyo55`, you can make the curl command in the following way:
 
@@ -56,6 +59,8 @@ $ curl -u johndoe:d10ev1shpm10x5qox9ckw1k9b792p9rq0ogplpn5cyo55 https://api.gith
 Then you can open `output.json` with your favorite text editor to have a deep look.
 
 :information_source: For more information about Github API authentications, refer to [this](https://developer.github.com/v3/auth/) and [this](https://developer.github.com/v3/oauth_authorizations/) documentation.
+
+### START THE LAB
 
 :information_source: From now on, we will not give you step-by-step instructions in the labs. You already have the foundation in Python and data analytics that allows you to research data solutions. We will, however, provide general guidance on how to complete your lab assignments. In case you find it difficult to tackle your assignments with the general guidance, please don't hesitate to ask the instructional team. We are here to help! :v:
 
@@ -91,6 +96,8 @@ Using Python, call Github API to find out the cold joke contained in the 24 secr
 https://github.com/ironhack-datalabs/scavenger
 
 The filenames of the secret files contain `.scavengerhunt` and they are scattered in different directories of this repo. The secret files are named from `.0001.scavengerhunt` to `.0024.scavengerhunt`. They are scattered randomly throughout this repo. You need to **search for these files by calling the Github API**, not searching the local files on your computer.
+
+**HINT** : Be careful with the text encoding!!!
 
 Notes:
 
